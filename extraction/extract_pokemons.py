@@ -1,5 +1,5 @@
 import requests as r
-from utils import save_to_raw
+from .utils_extract import save_to_raw
 
 
 pokemons = []
@@ -28,6 +28,4 @@ def extract_pokemon_details():
             })
         url = data["next"]
 
-extract_pokemon_details()
-
-save_to_raw("raw_pokeapi_pokemon_details.json", pokemons)
+    save_to_raw("raw_pokeapi_pokemon_details.json", pokemons)

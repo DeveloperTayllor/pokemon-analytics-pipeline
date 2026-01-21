@@ -1,5 +1,5 @@
 import requests as r
-from utils import save_to_raw
+from .utils_extract import save_to_raw
 
 evoluations = []
 
@@ -32,13 +32,10 @@ def extract_evoluations():
                         "stage": stage
                     })
 
-                    # recursão para próximas evoluções
                     percorrer_chain(evolucao, stage + 1)
 
             percorrer_chain(chain_data["chain"])
 
         url = data["next"]
 
-extract_evoluations()
-
-save_to_raw("raw_pokeapi_evolutions.json", evoluations)
+    save_to_raw("raw_pokeapi_evolutions.json", evoluations)

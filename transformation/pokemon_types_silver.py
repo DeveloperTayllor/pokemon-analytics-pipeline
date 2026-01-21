@@ -1,4 +1,5 @@
-from utils import get_connection
+from .utils_transformation import get_connection
+
 
 def create_pokemon_types_silver():
     con = get_connection()
