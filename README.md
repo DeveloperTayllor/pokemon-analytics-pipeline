@@ -35,39 +35,60 @@ A arquitetura segue o padrão clássico:
 project-pokemon/
 │
 ├── data/
+│   ├── gold/
+│   │
 │   ├── raw/
-│   │   ├── raw_pokeapi_pokemon_details.json
-│   │   └── raw_pokeapi_evolutions.json
+│   │   ├── raw_pokeapi_evolutions.json
+│   │   └── raw_pokeapi_pokemon_details.json
 │   │
-│   ├── silver/
-│   │   ├── pokemon_silver.parquet
-│   │   ├── pokemon_types_silver.parquet
-│   │   ├── pokemon_stats_silver.parquet
-│   │   └── evolutions.parquet
-│   │
-│   └── gold/   (opcional / não utilizada neste projeto)
+│   └── silver/
+│       ├── evolutions.parquet
+│       ├── pokemon_silver.parquet
+│       ├── pokemon_stats_silver.parquet
+│       └── pokemon_types_silver.parquet
+│
+├── data_quality/
+│   ├── __pycache__/
+│   └── validate_silver.py
 │
 ├── extraction/
+│   ├── __pycache__/
+│   ├── extract_evolutions.py
 │   ├── extract_pokemons.py
-│   ├── extract_evoluations.py
 │   ├── extraction_main.py
-│   └── utils.py
+│   └── utils_extract.py
+│
+├── imgs/
+│   ├── Arquitetura_AWS.drawio.png
+│   ├── Arquitetura_pokemon.drawio.png
+│   ├── image-1.png
+│   ├── image-2.png
+│   ├── image-3.png
+│   └── image.png
+│
+├── solucoes/
+│   ├── query_pergunta_numero_1.sql
+│   ├── query_pergunta_numero_2.sql
+│   ├── query_pergunta_numero_3.sql
+│   ├── query_pergunta_numero_4.sql
+│   └── Respostas.md
 │
 ├── transformation/
-│   ├── pokemon_silver.py
-│   ├── pokemon_types_silver.py
-│   ├── pokemon_stats_silver.py
+│   ├── __pycache__/
 │   ├── evolutions_silver.py
+│   ├── pokemon_silver.py
+│   ├── pokemon_stats_silver.py
+│   ├── pokemon_types_silver.py
 │   ├── transformation_main.py
 │   └── utils_transformation.py
 │
-├── data_quality/
-│   └── validate_silver.py
+├── venv/
 │
+├── .gitignore
 ├── main.py
 ├── pokemon.duckdb
 ├── README.md
-└── .gitignore
+└── requirements.txt
 ```
 
 ---
