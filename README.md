@@ -8,8 +8,14 @@ O objetivo é extrair dados brutos da API, transformar e organizar esses dados e
 
 A arquitetura segue o padrão clássico:
 
-**Raw → Silver → Data Quality**
+![Arquitetura do projeto](imgs/Arquitetura_pokemon.drawio.png)
 
+-- CONSIDERAÇÕES: Optei por executar localmente para reduzir custo e complexidade operacional do desafio, mantendo o desenho arquitetural compatível com cloud. Usei DuckDB e pastas simulando o Data Lake (raw/silver/gold) porque isso me permite validar o pipeline, qualidade e modelagem de ponta a ponta. Em um cenário produtivo, a mesma arquitetura é portável para AWS trocando storage local por S3 e orquestração/execução por serviços gerenciados (Glue/Lambda/Step Functions), sem mudar o conceito.
+
+
+-- Caso optemos por seguir desenvolvendo a mesma arquitetura em nuvem tbm realizei o esboço 
+
+![Arquitetura do projeto](imgs/Arquitetura_AWS.drawio.png)
 ---
 
 ## 🧠 Objetivos do Projeto
