@@ -1,7 +1,7 @@
 from .pokemon_silver import create_pokemon_silver
 from .pokemon_stats_silver import create_pokemon_stats_silver
 from .pokemon_types_silver import create_pokemon_types_silver
-from .evoluations_silver import create_evoluations_silver
+from .evolutions_silver import create_evolutions_silver
 
 # Objetivo:
 #   Orquestrar a criação de todas as tabelas da camada Silver no DuckDB.
@@ -25,4 +25,4 @@ def run_transformation_to_silver():
     create_pokemon_silver()
     create_pokemon_stats_silver()
     create_pokemon_types_silver()
-    create_evoluations_silver()
+    create_evolutions_silver()

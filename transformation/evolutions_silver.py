@@ -16,7 +16,7 @@ from .utils_transformation import get_connection
 #
 
 
-def create_evoluations_silver():
+def create_evolutions_silver():
     # Abre conexão com o DuckDB
     con = get_connection()
 
